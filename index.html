@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<!-- PREMIERE ETAPE -->
+<header class="text-center p-5" style="background-image: url(./img/chateau.jpeg); background-size: cover; background-position: center">
+  <img src="./img/harry.png" alt="logo" />
+</header>
+
+<!-- DEUXIEME ETAPE -->
+<nav class="navbar bg-dark navbar-dark navbar-expand-md">
+  <div class="container">
+    <div class="navbar-brand">Portail</div>
+    <!-- NE PAS TOUCHER (boutton en responsive : oui je suis gentil) -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- LES LIENS -->
+    <div id="navbarText" class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Boutique du château</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Boutique d'Ollivander</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dossier d'inscription</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- TROISIEME ETAPE / LA GRILLE BOOTSTRAP -->
+<section style="background-image: url(./img/decor.jpeg)">
+  <div class="container">
+    <div class="row">
+      <div class="col text-white p-5">
+        <h3 class="text-center">Inscriptions ouvertes<span class="d-block font-weight-light mt-5">Année 2020-2021</span></h3>
+        
+        <div class="dropdown text-center">
+          <button class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" >
+            Documents
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Dossier d'inscription</a>
+            <a class="dropdown-item" href="#">Règlement intérieur</a>
+            <a class="dropdown-item" href="#">Documents concernant l'internat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUATRIEME ETAPE -->
+<section class="bg-light p-3">
+  <div class="container">
+  
+    <h2>Meilleures ventes</h2>
+    
+    <!--  LA GRILLE BOOTSTRAP -->
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="card m-3">
+          <img src="./img/echarpe.jpeg" alt="Echarpe" class="card-img-top" />
+          <div class="card-body" style="min-height: 130px">
+            <h5>Echarpe deluxe Harry Potter Gryffondor pourpre et or</h5>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-block btn-outline-secondary" data-toggle="modal" data-target="#echarpeModal">Acheter</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6">
+        <div class="card m-3">
+          <img src="./img/coupe.jpeg" alt="Coupe" class="card-img-top" />
+          <div class="card-body" style="min-height: 130px">
+            <h5>La Coupe des 3 Sorciers</h5>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-block btn-outline-secondary" data-toggle="modal" data-target="#coupeModal">Acheter</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="card m-3">
+          <img src="./img/baguette.jpeg" alt="Baguette" class="card-img-top" />
+          <div class="card-body" style="min-height: 130px">
+            <h5>Baguette magique de Harry Potter avec boîte Ollivander</h5>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-block btn-outline-secondary" data-toggle="modal" data-target="#baguetteModal">Acheter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CINQUIEME ETAPE -->
+<footer class="bg-dark text-light p-3 text-center">
+  <div class="container">
+    © Harry Potter
+  </div>
+</footer>
+
+<!-- MODAL --->
+<div id="echarpeModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Echarpe deluxe Harry Potter Gryffondor pourpre et or</h5>
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="min-height: 130px">
+        <img src="./img/echarpe.jpeg" class="w-100" />
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button classs="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Bientôt disponible">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="coupeModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>La Coupe des 3 Sorciers</h5>
+        <button>
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="min-height: 130px">
+        <img src="./img/coupe.jpeg" />
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button classs="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Bientôt disponible">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="baguetteModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Baguette magique de Harry Potter avec boîte Ollivander</h5>
+        <button data-dismiss="modal" class="close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="./img/baguette.jpeg" class="w-100" />
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Bientôt disponible">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Javascript -->
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
